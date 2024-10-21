@@ -38,6 +38,8 @@ fun main() {
     }
 
     val savingsAccount = SavingsAccount(Status.Sent)
+
+    // always need to create a state machine instance for each SavingsAccount object
     val nStateMachine = stateMachine.with {
         initialState(savingsAccount.status)
     }
